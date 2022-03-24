@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/reset.css">
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/home.css">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <div class="gutter-right logo">
+            <img src="./assets/big-logo.png" />
+        </div>
+    </header>
+    <main>
+        <section class="main-section">
+            <div class="left">
+                <h2>Current Poll</h2>
+                <div id="current-poll-container">
+                
+                </div>
+
+                <div class="form-and-buttons">
+                    <div class="names-form">
+                        <label>
+                            Poll name
+                            <input id="poll-name-input">
+                        </label>
+                        <label>
+                            Option One
+                            <input id="option-one-input">
+                        </label>
+                        <label>
+                            Option Two
+                            <input id="option-two-input">
+                        </label>
+                        <button id="make-poll-button">Create poll</button>
+                    </div>
+
+                    <div class="buttons-form">
+                        <div class="top-buttons">
+                            <!--playing around with manipulating #poll-name through JS-->
+                            <h3 id="poll-name">Poll Name</h3>
+                            <div class="left-buttons">
+                                <h4 id="option-one-name">Option One</h3>
+                                <button id="option-one-add-button">Add</button>
+                                <button id="option-one-subtract-button">Subtract</button>
+                            </div>
+
+                            <div class="right-buttons">
+                                <h4 id="option-two-name">Option Two</h3>
+                                <button id="option-two-add-button">Add</button>
+                                <button id="option-two-subtract-button">Subtract</button>
+                            </div>
+
+                            <button id="reset-poll-button">Reset poll</button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="right">
+                <h2>Past Polls</h2>
+                <div id="past-polls-container">
+
+
+
+                </div>
+            </div>
+        
+
+        </section>
+    </main>
+    <footer>
+        <div class="copy gutter-right">&copy; 2021 Alchemy Code Lab</div>
+    </footer>
+
+    <script type="module" src="./polls.js"></script>
+</body>
+
+</html>
