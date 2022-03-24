@@ -35,7 +35,7 @@ PLAN:
     - export async functions
     - work on render-utils file
           - renderCurrentPoll
-          - renderPastPolls
+          
     - start filling out polls.js
         - grabbing DOM
             - question-input
