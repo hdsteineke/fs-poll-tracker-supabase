@@ -12,16 +12,17 @@ const makePollButton = document.querySelector('#make-poll-button');
 */
 
 const questionHeader = document.querySelector('#poll-name');
-
 const optionOneHeader = document.querySelector('#option-one-name');
+const optionTwoHeader = document.querySelector('#option-two-name');
+
 const oneAddButton = document.querySelector('#option-one-add-button');
 const oneSubtractButton = document.querySelector('#option-one-subtract button');
-
-const optionTwoHeader = document.querySelector('#option-two-name');
 const twoAddButton = document.querySelector('#option-two-add-button');
 const twoSubtractButton = document.querySelector('#option-two-subtract-button');
 
 const resetPollButton = document.querySelector('#reset-poll-button');
+
+
 
 let title = '';
 let name1 = '';
@@ -37,9 +38,36 @@ pollForm.addEventListener('submit', (e) => {
 
     title = data.get('poll-name-input');
     name1 = data.get('option-one-input');
+    //score1 = data.get('');
     name2 = data.get('option-two-input');
+    //score2 = data.get('');
 
     pollForm.reset();
+    console.log('heyy');
 
     //function to displayCurrentPolls
+});
+
+oneAddButton.addEventListener('click', () => {
+    score1++;
+    //function to displayCurrentPolls
+});
+
+oneSubtractButton.addEventListener('click', () => {
+    score1--;
+    //function to displayCurrentPolls
+});
+
+twoAddButton.addEventListener('click', () => {
+    score2++;
+    //function to displayCurrentPolls
+});
+
+twoSubtractButton.addEventListener('click', () => {
+    score1--;
+    //function to displayCurrentPolls
+});
+
+resetPollButton.addEventListener('click', async() => {
+    
 });
