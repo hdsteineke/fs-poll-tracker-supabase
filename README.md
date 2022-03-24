@@ -41,7 +41,13 @@ PLAN:
             - question-input
             - input-one
             - input-two
+            - etc
 
         - setting state (question, option1, option2, score1, score2)
+
+- add event listeners
+- write functions:
+    - displayCurrentPoll
+    - displayAllPolls
 
 - work on sign-in page

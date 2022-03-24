@@ -4,10 +4,12 @@ import { getPolls, createPoll } from '../fetch-utils';
 const currentPollEl = document.querySelector('#current-poll-container');
 const pastPollsEl = document.querySelector('#past-polls-container');
 
-const questionInput = document.querySelector('#poll-name-input');
+const pollForm = document.querySelector('.poll-form')
+/* const questionInput = document.querySelector('#poll-name-input');
 const optionOneInput = document.querySelector('#option-one-input');
 const optionTwoInput = document.querySelector('#option-two-input');
 const makePollButton = document.querySelector('#make-poll-button');
+*/
 
 const questionHeader = document.querySelector('#poll-name');
 
@@ -27,3 +29,17 @@ let name2 = '';
 let score1 = 0;
 let score2 = 0;
 
+
+pollForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    const data = new FormData(pollForm);
+
+    title = data.get('poll-name-input');
+    name1 = data.get('option-one-input');
+    name2 = data.get('option-two-input');
+
+    pollForm.reset();
+
+    //function to displayCurrentPolls
+});
