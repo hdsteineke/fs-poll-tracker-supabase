@@ -16,4 +16,6 @@ export function renderPoll(aTitle, anOption1, aScore1, anOption2, aScore2) {
 
     pollDiv.classList.add('.poll');
 
+    return pollDiv;
+
 }
