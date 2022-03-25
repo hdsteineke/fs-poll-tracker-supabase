@@ -1,5 +1,5 @@
 import { renderPoll } from '../render-utils.js';
-import { getPolls, createPoll } from '../fetch-utils.js';
+import { getPolls, createPoll, getUser, checkAuth, redirectToPolls, signUpUser, signInUser, logout } from '../fetch-utils.js';
 
 const currentPollEl = document.querySelector('#current-poll-container');
 const pastPollsEl = document.querySelector('#past-polls-container');
@@ -21,7 +21,9 @@ const twoAddButton = document.querySelector('#option-two-add-button');
 const twoSubtractButton = document.querySelector('#option-two-subtract-button');
 
 const resetPollButton = document.querySelector('#reset-poll-button');
+const logoutButton = document.getElementById('logout-button');
 
+checkAuth();
 
 
 let title = '';
@@ -38,9 +40,11 @@ pollForm.addEventListener('submit', (e) => {
 
     title = data.get('poll-name-input');
     name1 = data.get('option-one-input');
-    //score1 = data.get('');
     name2 = data.get('option-two-input');
-    //score2 = data.get('');
+
+    // questionInput.value = '';
+    // optionOneInput.value = '';
+    // optionTwoInput.value = '';
 
     pollForm.reset();
 
@@ -79,9 +83,10 @@ resetPollButton.addEventListener('click', async () => {
     
 });
 
+
+
 function displayCurrentPollEl() {
     currentPollEl.textContent = '';
-    
     
     optionOneHeader.textContent = name1;
     optionTwoHeader.textContent = name2;
@@ -97,7 +102,7 @@ function displayCurrentPollEl() {
         // call the render game function to create a game element
     const pollEl = renderPoll(title, name1, score1, name2, score2);
         
-        
         // append the element to the cleared out current game div
     currentPollEl.append(pollEl);
 }
+

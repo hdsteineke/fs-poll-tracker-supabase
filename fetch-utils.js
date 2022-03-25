@@ -20,28 +20,36 @@ export async function getPolls() {
     return checkError(response);
 }
 
+
+//Is this when the user is initially assigned an ID upon signing in?
 export async function getUser() {
     return client.auth.session();
 }
 
+
+//connects the id to the user for tracking their activity and access to polls
 export async function checkAuth() {
     const user = await getUser();
-
+//returns unauthorized user to Home page
     if (!user) location.replace('../');
 }
 
+
+//takes user to polls page if they are authorized?
 export async function redirectToPolls() {
     if (await getUser()) {
-        location.replace('./games');
+        location.replace('./polls');
     }
 }
 
+//stores username and password in Supabase for future use (creates an account for user)
 export async function signUpUser(email, password) {
     const response = await client.auth.signUp({ email, password });
 
     return response.user;
 }
 
+//sends sign-in information to Supabase to check against existing user accounts, and logs user in if info matches existing account
 export async function signInUser(email, password) {
     const response = await client.auth.signIn({ email, password });
 
