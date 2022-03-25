@@ -20,6 +20,6 @@ export async function getPolls() {
     return checkError(response);
 }
 
-function checkError({ data, error}) {
-    return error ? console.error(error) : data;
-}
+// function checkError({ data, error}) {
+//     return error ? console.error(error) : data;
+// }

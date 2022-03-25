@@ -1,8 +1,8 @@
-import { renderPoll } from '../render-utils.js';
-import { getPolls, createPoll } from '../fetch-utils';
+// import { renderPoll } from '../render-utils.js';
+// import { getPolls, createPoll } from '../fetch-utils';
 
-const currentPollEl = document.querySelector('#current-poll-container');
-const pastPollsEl = document.querySelector('#past-polls-container');
+// const currentPollEl = document.querySelector('#current-poll-container');
+// const pastPollsEl = document.querySelector('#past-polls-container');
 
 const pollForm = document.querySelector('.poll-form')
 /* const questionInput = document.querySelector('#poll-name-input');
@@ -11,9 +11,9 @@ const optionTwoInput = document.querySelector('#option-two-input');
 const makePollButton = document.querySelector('#make-poll-button');
 */
 
-const questionHeader = document.querySelector('#poll-name');
-const optionOneHeader = document.querySelector('#option-one-name');
-const optionTwoHeader = document.querySelector('#option-two-name');
+// const questionHeader = document.querySelector('#poll-name');
+// const optionOneHeader = document.querySelector('#option-one-name');
+// const optionTwoHeader = document.querySelector('#option-two-name');
 
 const oneAddButton = document.querySelector('#option-one-add-button');
 const oneSubtractButton = document.querySelector('#option-one-subtract button');
@@ -24,9 +24,9 @@ const resetPollButton = document.querySelector('#reset-poll-button');
 
 
 
-let title = '';
-let name1 = '';
-let name2 = '';
+// let title = '';
+// let name1 = '';
+// let name2 = '';
 let score1 = 0;
 let score2 = 0;
 
