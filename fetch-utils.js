@@ -20,6 +20,41 @@ export async function getPolls() {
     return checkError(response);
 }
 
+export async function getUser() {
+    return client.auth.session();
+}
+
+export async function checkAuth() {
+    const user = await getUser();
+
+    if (!user) location.replace('../');
+}
+
+export async function redirectToPolls() {
+    if (await getUser()) {
+        location.replace('./games');
+    }
+}
+
+export async function signUpUser(email, password) {
+    const response = await client.auth.signUp({ email, password });
+
+    return response.user;
+}
+
+export async function signInUser(email, password) {
+    const response = await client.auth.signIn({ email, password });
+
+    return response.user;
+}
+
+export async function logout() {
+    await client.auth.signOut();
+
+    return
+}
+
 function checkError({ data, error}) {
     return error ? console.error(error) : data;
 }
+
