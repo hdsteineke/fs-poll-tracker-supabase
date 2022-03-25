@@ -15,31 +15,29 @@
 
 <body>
     <header>
-        <div class="gutter-right logo">
-            <img src="./assets/big-logo.png" />
-        </div>
-    </header>
     <main>
-        <section class="main-section">
-            <div class="left">
-                
+        <div class="top">
+            <div class="auth-container">
+                <form id="sign-in">
+                    <h3>Sign In</h3>
+                    <label>Email </label><input type="email" name="email" id="sign-in-email"/>
+                    <label>Password </label><input type="password" name="password" id="sign-in-password"/>
+                    <button>Submit</button>
+                </form>
             </div>
-
-            <div class="right">
-                <h2>SignUp</h2>
-                <div id="past-polls-container">
-
-
-
-                </div>
+        </div>
+        <div class="bottom">
+            <div class="auth-container">
+                <form id="sign-up">
+                    <h3>Sign Up</h3>
+                    <label>Email </label><input type='email' name='email' id="sign-up-email" />
+                    <label>Password </label><input type='password' name='password' id="sign-up-password" />
+                    <button>Submit</button>
+                </form>
             </div>
-        
-
-        </section>
+        </div>
     </main>
-    <footer>
-        <div class="copy gutter-right">&copy; 2021 Alchemy Code Lab</div>
-    </footer>
+
 
     <script type="module" src="./app.js"></script>
 </body>

@@ -29,6 +29,10 @@ body {
     
     font-family: 'Titillium Web', sans-serif;
     background-color: var(--color2);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 
 main {
@@ -58,7 +62,7 @@ header {
     justify-content: flex-end;
     background-color: var(--color3);
     height: var(--header-height);
-    box-shadow: var(--shadow);
+    /* box-shadow: var(--shadow); */
 }
 
 
@@ -87,7 +91,7 @@ footer {
     display: flex;
     justify-content: flex-end;
     background-color: var(--color3);
-    box-shadow: var(--shadow);
+    /* box-shadow: var(--shadow); */
 }
 
 .main-section {
@@ -133,7 +137,10 @@ footer {
     border: 1px, black, solid;
 }
 
-.right {
-    grid-template-rows: row;
+.top {
+    border: 1px, black, solid;
+}
 
+.bottom {
+    border: 1px, black, solid;
 }
