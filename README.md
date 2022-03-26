@@ -24,3 +24,30 @@ Additional considerations:
   - What needs to live in a persistence layer?
 - Is there some state we need to initialize?
 - Ask: should any of this work be abstracted into functions? (i.e., is the work complicated? can it be resused?)
+
+
+PLAN:
+- draw wireframe: (refer to previous poll tracker assignment)
+- fill out HTML
+- create new folder wih polls.js and index.html
+- start writing fetch-utils
+    - paste KEY code and CDN from Supabase
+    - export async functions
+    - work on render-utils file
+          - renderCurrentPoll
+          
+    - start filling out polls.js
+        - grabbing DOM
+            - question-input
+            - input-one
+            - input-two
+            - etc
+
+        - setting state (question, option1, option2, score1, score2)
+
+- add event listeners
+- write functions:
+    - displayCurrentPoll
+    - displayAllPolls
+
+- work on sign-in page
