@@ -5,13 +5,7 @@ const currentPollEl = document.querySelector('#current-poll-container');
 const pastPollsEl = document.querySelector('#past-polls-container');
 
 const pollForm = document.querySelector('.poll-form');
-const questionInput = document.querySelector('#poll-name-input');
-const optionOneInput = document.querySelector('#option-one-input');
-const optionTwoInput = document.querySelector('#option-two-input');
-const makePollButton = document.querySelector('#make-poll-button');
 
-
-const questionHeader = document.querySelector('#poll-name');
 const optionOneHeader = document.querySelector('#option-one-name');
 const optionTwoHeader = document.querySelector('#option-two-name');
 

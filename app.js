@@ -1,5 +1,5 @@
 // import functions and grab DOM elements
-import { getUser, checkAuth, redirectToPolls, signUpUser, signInUser, logout } from './fetch-utils.js';
+import { redirectToPolls, signUpUser, signInUser } from './fetch-utils.js';
 
 const signInForm = document.getElementById('sign-in');
 const signInInput = document.getElementById('sign-in-email');
@@ -25,7 +25,6 @@ signInForm.addEventListener('submit', async (event)=> {
     } else {
         console.error(user);
     }
-  
 });
 
 signUpForm.addEventListener('submit', async (event)=> {
@@ -37,7 +36,7 @@ signUpForm.addEventListener('submit', async (event)=> {
     } else {
         console.error(user);
     }
-})
+});
 // get user input
 
 // use user input to update state 

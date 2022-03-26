@@ -11,9 +11,6 @@ export function renderPoll(poll) {
     scoreOneEl.textContent = poll.score_1;
     optionTwoEl.textContent = poll.option_2;
     scoreTwoEl.textContent = poll.score_2;
-
-    console.log(poll, 'yep');
-    console.log(titleEl, optionOneEl, scoreOneEl, optionTwoEl, scoreTwoEl, 'nope');
     
     pollDiv.append(titleEl, optionOneEl, scoreOneEl, optionTwoEl, scoreTwoEl);
     
